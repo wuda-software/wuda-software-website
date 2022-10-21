@@ -15,6 +15,45 @@ nav .brand-logo > img {
   margin: 0 auto;
 }
 
+.hero {
+  color: white;
+  padding-top: 250px;
+  padding-bottom: 125px;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.2), 
+    rgba(0, 0, 0, 0.8)
+  ), url('../img/bg.jpg') #333;
+  background-size: cover;
+}
+.hero h1 { font-size: 2.75em; }
+.hero p { font-size: 1.3em; opacity: 0.75; }
+
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em;
+}
+.grid-3 > div {
+  border: 1px solid #ccc;
+  padding: 1em;
+  border-radius: 3px;
+  background-color: #fff;
+}
+.grid-3 h4 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.grid-3 ul { list-style-position: inside; }
+.grid-3 ul li { list-style-type: disc; }
+
+
+.imprint .grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1em;
+}
 
 .grid-process {
   display: grid;
@@ -80,6 +119,7 @@ nav .brand-logo > img {
 footer {
   background-color: #111e29;
   color: white;
+  padding: 1.5em 0;
 }
 footer .grid {
   display: grid;
