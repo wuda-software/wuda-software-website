@@ -1,19 +1,25 @@
-* {
-  margin: 0; padding: 0;
+nav { background-color: #1d364b; }
+nav .brand-logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
-html {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-body {
-  color: gray;
-}
-nav {
-  background-color: tomato;
+nav .brand-logo > img {
+  height: 75%;
 }
 .container {
   width: 75%;
   margin: 0 auto;
 }
 footer {
-  background-color: lightblue;
+  background-color: #111e29;
+  color: white;
+}
+footer .grid {
+  display: grid;
+  grid-template-columns: 4fr 3fr 2fr;
+  gap: 1em;
+}
+footer .grid > div:last-of-type {
+  text-align: right;
 }
