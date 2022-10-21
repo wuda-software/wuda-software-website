@@ -29,27 +29,32 @@ nav .brand-logo > img {
 .hero p { font-size: 1.3em; opacity: 0.75; }
 
 
-.grid-3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+
+.grid {
+  display: grid;  
   gap: 2em;
 }
-.grid-3 > div {
+.grid > div {
   border: 1px solid #ccc;
   padding: 1em;
   border-radius: 3px;
   background-color: #fff;
 }
-.grid-3 h4 {
+.grid h4 {
   margin: 0;
   font-size: 1.5em;
   font-weight: bold;
 }
-.grid-3 ul { list-style-position: inside; }
-.grid-3 ul li { list-style-type: disc; }
+.grid ul { list-style-position: inside; }
+.grid ul li { list-style-type: disc; }
+
+.grid-2 {grid-template-columns: 1fr 1fr;}
+.grid-4 {grid-template-columns: 1fr 1fr 1fr 1fr;}
 
 
-.imprint .grid {
+
+
+.imprint-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 1em;
@@ -121,11 +126,11 @@ footer {
   color: white;
   padding: 1.5em 0;
 }
-footer .grid {
+.footer-grid {
   display: grid;
   grid-template-columns: 4fr 3fr 2fr;
   gap: 1em;
 }
-footer .grid > div:last-of-type {
+.footer-grid > div:last-of-type {
   text-align: right;
 }
