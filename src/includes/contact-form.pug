@@ -1,14 +1,18 @@
-div.container
-  h3 Send a Request
-  p.
-    If you have any concerns, inquiries or want to work with us, then drop us a request with the basic info below.
-    We are looking forward hearing from you!
+div.container.card.contact-form
+  div
+    h3 Send Request
+    p.
+      If you have any concerns, inquiries or want to work with us, then drop us a request with the basic info below.
+      We are looking forward hearing from you!
   form
-    div.row
-      div.input-field
-        input#customer_name(type='text')
-        label(for=customer_name) Your Name
-    div.row
-      div.input-field
-        textarea#message.materialize-textarea
-        label(for=message) Your Message
+    div
+      label(for=customer_name) Your Name
+      input#customer_name.browser-default(type='text' placeholder='Enter your first- and lastname')
+    div
+      label(for=customer_email) Your E-Mail
+      input#customer_email.browser-default(type='email' placeholder='Enter your email address')
+    div
+      label(for=message) Your Message
+      textarea#message(placeholder='Question, request, project description')
+    div.right-align
+      button#send-request Send Request

@@ -1,3 +1,5 @@
+body {background-color: #eeeeee;}
+
 nav { background-color: #1d364b; }
 nav .brand-logo {
   height: 100%;
@@ -7,10 +9,74 @@ nav .brand-logo {
 nav .brand-logo > img {
   height: 75%;
 }
+
 .container {
   width: 75%;
   margin: 0 auto;
 }
+
+
+.grid-process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+
+.contact-form {
+  padding: 1em;
+  background-color: #fff;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+
+}
+.contact-form form {
+  display: grid;
+  gap: 0.25em;
+}
+.contact-form h3 {
+  font-size: 1.75em;
+  margin-top: 0;
+}
+.contact-form label {
+  display: block;
+  line-height: 2;
+}
+.contact-form input, .contact-form textarea {
+  border: 1px solid steelblue;
+  background-color: #4682b411;
+  border-radius: 3px;
+  padding: 7px;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contact-form textarea {
+  height: 150px;
+  line-height: 1.25;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: #000b;
+}
+.contact-form button {
+  border: 1px solid steelblue;
+  color: steelblue;
+  background-color: white;
+  border-radius: 3px;
+  padding: 14px;
+  width: 200px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  margin-top: 1em;
+}
+.contact-form button:hover {
+  color: white;
+  background-color: steelblue;
+  cursor: pointer;
+}
+
+
 footer {
   background-color: #111e29;
   color: white;

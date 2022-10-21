@@ -11,8 +11,8 @@
         <div class="nav-wrapper container"><a class="brand-logo" href="#"> <img src="img/wuda-logo.png"></a>
           <ul class="right hide-on-med-and-down">
             <li><a href=".">Home</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="about.html">About us</a></li>
             <li><a href="contact.html">Contact us</a></li>
           </ul>
         </div>
@@ -58,24 +58,29 @@
         <li>Kompetente Beratung</li>
       </ul>
     </main>
-    <div class="container">
-      <h3>Send a Request</h3>
-      <p>
-        If you have any concerns, inquiries or want to work with us, then drop us a request with the basic info below.
-        We are looking forward hearing from you!
-      </p>
+    <div class="container card contact-form">
+      <div>
+        <h3>Send Request</h3>
+        <p>
+          If you have any concerns, inquiries or want to work with us, then drop us a request with the basic info below.
+          We are looking forward hearing from you!
+        </p>
+      </div>
       <form>
-        <div class="row">
-          <div class="input-field">
-            <input id="customer_name" type="text">
-            <label>Your Name</label>
-          </div>
+        <div>
+          <label>Your Name</label>
+          <input class="browser-default" id="customer_name" type="text" placeholder="Enter your first- and lastname">
         </div>
-        <div class="row">
-          <div class="input-field">
-            <textarea class="materialize-textarea" id="message"></textarea>
-            <label>Your Message</label>
-          </div>
+        <div>
+          <label>Your E-Mail</label>
+          <input class="browser-default" id="customer_email" type="email" placeholder="Enter your email address">
+        </div>
+        <div>
+          <label>Your Message</label>
+          <textarea id="message" placeholder="Question, request, project description"></textarea>
+        </div>
+        <div class="right-align">
+          <button id="send-request">Send Request</button>
         </div>
       </form>
     </div>
