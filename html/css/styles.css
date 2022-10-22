@@ -1,3 +1,4 @@
+html {font-family: 'Roboto', sans-serif;}
 body {background-color: #eeeeee;}
 
 nav { background-color: #1d364b; }
@@ -52,7 +53,7 @@ nav .brand-logo > img {
 
 .grid-benefits {
   gap: 5em;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 1fr;
   margin: 4em 0;
   align-items: center;
   font-size: 1.25em;
@@ -62,11 +63,22 @@ nav .brand-logo > img {
   object-fit: contain;
 }
 
+.grid-modules {
+  gap: 5em;
+  grid-template-columns: 1fr 2fr;
+  margin: 4em 0;
+  align-items: center;
+  font-size: 1.25em;
+}
+.grid-modules img {
+  width: 100%;
+  object-fit: contain;
+}
 
 .grid-partners {
   grid-template-columns: repeat(6, 1fr);
   gap: 4em;
-  align-items: center;
+  align-items: unset;
   margin: 2em 0;
 }
 .grid-partners img {
@@ -98,7 +110,6 @@ nav .brand-logo > img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2em;
-
 }
 .contact-form form {
   display: grid;
@@ -153,8 +164,23 @@ footer {
 .footer-grid {
   display: grid;
   grid-template-columns: 4fr 3fr 2fr;
-  gap: 1em;
+  gap: 3em;
 }
-.footer-grid > div:last-of-type {
-  text-align: right;
+.footer-grid h6 { opacity: 0.6; }
+.footer-grid > div:last-of-type { text-align: right; }
+.footer-grid > div:last-of-type ul {  
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.5em;
+}
+
+@media only screen and (max-width: 992px) {
+  /*---> Tablet */
+  .hero { padding-top: 1em; padding-bottom: 1em; }
+  .grid { grid-template-columns: 1fr; }
+  .contact-form { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 1em; }
+}
+@media only screen and (max-width: 600px) {
+  /*---> Smartphone */
 }
