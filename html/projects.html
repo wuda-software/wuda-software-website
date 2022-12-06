@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Wuda Software</title>
+    <title>Projects - Wuda Software</title>
     <link rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/materialize.min.js"></script>
   </head>
   <body>
     <div class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper container"><a class="brand-logo" href="#"> <img src="img/wuda-logo.png"></a>
+        <div class="nav-wrapper container"><a class="brand-logo left" href="."> <img src="img/wuda-logo.png"></a><a class="sidenav-trigger right" href="#" data-target="menu"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href=".">Home</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="#">Sign in</a></li>
           </ul>
         </div>
       </nav>
     </div>
+    <ul class="sidenav" id="menu">
+      <li><a href=".">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
     <main class="container">
       <h1>Projects</h1>
       <p>
@@ -95,18 +101,18 @@
           Tel.: +43 664 37 69 013
         </p>
       </div>
-      <form>
+      <form method="POST" action="./_request.php">
         <div>
           <label>Your Name</label>
-          <input class="browser-default" id="customer_name" type="text" placeholder="Enter your first- and lastname">
+          <input class="browser-default" id="customer_name" type="text" name="request_sender_name" placeholder="Enter your first- and lastname">
         </div>
         <div>
           <label>Your E-Mail</label>
-          <input class="browser-default" id="customer_email" type="email" placeholder="Enter your email address">
+          <input class="browser-default" id="customer_email" type="email" name="request_sender_mail" placeholder="Enter your email address">
         </div>
         <div>
           <label>Your Message</label>
-          <textarea id="message" placeholder="Enter your question, request or project description"></textarea>
+          <textarea id="message" name="request_message" placeholder="Enter your question, request or project description"></textarea>
         </div>
         <div class="right-align">
           <button id="send-request">Send Request</button>
@@ -130,9 +136,12 @@
         <div>
           <h6>Stay in touch</h6>
           <ul>
+            <li><a target="_blank" href="https://play.google.com/store/apps/dev?id=5210774711432599412">Google Play</a></li>
             <li><a target="_blank" href="https://github.com/wuda-software">GitHub</a></li>
             <li><a target="_blank" href="https://www.linkedin.com/in/daniel-wurzer-84047517b/">LinkedIn</a></li>
             <li><a target="_blank" href="https://www.instagram.com/wuda.io/">Instagram</a></li>
+          </ul>
+          <ul>
             <li><a target="_blank" href="https://www.xing.com/profile/Daniel_Wurzer10">Xing</a></li>
             <li><a target="_blank" href="https://www.youtube.com/user/56389578">YouTube</a></li>
             <li><a target="_blank" href="https://twitter.com/wudablog">Twitter</a></li>
@@ -140,5 +149,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/materialize.min.js"></script>
+    <script>M.AutoInit();</script>
   </body>
 </html>

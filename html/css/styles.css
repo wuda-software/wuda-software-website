@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {font-family: 'Roboto', sans-serif;}
 body {background-color: #eeeeee;}
 
@@ -29,6 +36,10 @@ nav .brand-logo > img {
 .hero h1 { font-size: 2.75em; }
 .hero p { font-size: 1.3em; opacity: 0.75; }
 
+
+.container.terms h2 { font-size: 1.5em; }
+
+.container.privacy h2 { font-size: 1.5em; }
 
 
 .grid {
@@ -87,7 +98,6 @@ nav .brand-logo > img {
   object-fit: contain;
   filter: grayscale(1);
 }
-
 
 
 .imprint-grid {

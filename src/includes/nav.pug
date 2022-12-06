@@ -1,8 +1,10 @@
 div.navbar-fixed
   nav
     div.nav-wrapper.container
-      a.brand-logo(href="#") 
+      a.brand-logo.left(href=".") 
         img(src='img/wuda-logo.png')
+      a.sidenav-trigger.right(href="#", data-target="menu")
+        i.material-icons menu
       ul.right.hide-on-med-and-down
         li
           a(href='.') Home
@@ -12,5 +14,14 @@ div.navbar-fixed
           a(href='projects.html') Projects
         li
           a(href='contact.html') Contact
-        li
-          a(href='#') Sign in
+        //- li
+          //- a(href='#') Sign in
+ul.sidenav#menu
+  li
+    a(href='.') Home
+  li
+    a(href='services.html') Services
+  li
+    a(href='projects.html') Projects
+  li
+    a(href='contact.html') Contact

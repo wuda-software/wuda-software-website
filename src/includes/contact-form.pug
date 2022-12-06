@@ -8,15 +8,15 @@ div.container.card.contact-form
       You can contact us via e-mail or telephone:<br>
       E-Mail: info [at] wuda . io<br>
       Tel.: +43 664 37 69 013
-  form
+  form(method='POST', action='./_request.php')
     div
       label(for=customer_name) Your Name
-      input#customer_name.browser-default(type='text' placeholder='Enter your first- and lastname')
+      input#customer_name.browser-default(type='text' name='request_sender_name' placeholder='Enter your first- and lastname')
     div
       label(for=customer_email) Your E-Mail
-      input#customer_email.browser-default(type='email' placeholder='Enter your email address')
+      input#customer_email.browser-default(type='email' name='request_sender_mail' placeholder='Enter your email address')
     div
       label(for=message) Your Message
-      textarea#message(placeholder='Enter your question, request or project description')
+      textarea#message(name='request_message' placeholder='Enter your question, request or project description')
     div.right-align
       button#send-request Send Request
