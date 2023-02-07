@@ -41,7 +41,6 @@ nav .brand-logo > img {
 
 .container.privacy h2 { font-size: 1.5em; }
 
-
 .grid {
   display: grid;
   gap: 2em;
@@ -61,6 +60,7 @@ nav .brand-logo > img {
 
 
 .grid-2 {grid-template-columns: 1fr 1fr;}
+.grid-3 {grid-template-columns: 1fr 1fr 1fr;}
 .grid-4 {grid-template-columns: 1fr 1fr 1fr 1fr;}
 
 .grid-benefits {
