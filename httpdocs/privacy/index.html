@@ -7,33 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Individuelle webbasierte Applikationen für eine schnellere und effizientere Abarbeitung Ihrer Geschäftsprozesse. Starten Sie jetzt ein Projekt mit uns!">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="img/WUDA-Apple-Touch-Icon.png">
+    <link rel="apple-touch-icon" href="/img/WUDA-Apple-Touch-Icon.png">
     <meta property="og:title" content="Innovative Software-Lösungen für mehr Freiheit | Wuda Software">
     <meta property="og:description" content="Individuelle webbasierte Applikationen für eine schnellere und effizientere Abarbeitung Ihrer Geschäftsprozesse. Starten Sie jetzt ein Projekt mit uns!">
     <meta property="og:type" content="Website">
     <meta property="og:site_name" content="Wuda Software">
-    <link rel="stylesheet" href="css/materialize.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper container"><a class="brand-logo left" href="."> <img src="img/wuda-logo.png"></a><a class="sidenav-trigger right" href="#" data-target="menu"><i class="material-icons">menu</i></a>
+    <div class="navbar-fixed" style="height:0;">
+      <nav style="box-shadow: none;">
+        <div class="nav-wrapper container"><a class="brand-logo left" href="/"> <img src="/img/wuda-logo.png"><span>Wuda Software</span></a><a class="sidenav-trigger right" href="#" data-target="menu"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
-            <li><a href=".">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/modules">Modules</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
       </nav>
     </div>
     <ul class="sidenav" id="menu">
-      <li><a href=".">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="/modules">Modules</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
     <main class="container privacy">
       <h1>Privacy / Datenschutz</h1>
@@ -77,36 +72,33 @@
       </div>
     </main>
     <footer>
-      <div class="container footer-grid">
-        <div>
+      <div class="container row" style="gap: 1rem;">
+        <div class="s12 m4">
           <h6>About</h6>
           <p>Wuda Software plans and develops software projects and database applications for the digital future.</p>
         </div>
-        <div>
+        <div class="s12 m3">
           <h6>Legal Information</h6>
-          <ul>
-            <li><a href="terms.html">Terms and conditions</a></li>
-            <li><a href="imprint.html">Imprint</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-          </ul>
+          <div>
+            <p><a href="/terms">Terms and conditions<br></a><a href="/imprint">Imprint<br></a><a href="/privacy">Privacy Policy<br></a></p>
+          </div>
         </div>
-        <div>
+        <div class="s12 m5">
           <h6>Stay in touch</h6>
-          <ul>
-            <li><a target="_blank" href="https://play.google.com/store/apps/dev?id=5210774711432599412">Google Play</a></li>
-            <li><a target="_blank" href="https://github.com/wuda-software">GitHub</a></li>
-            <li><a target="_blank" href="https://www.linkedin.com/in/daniel-wurzer-84047517b/">LinkedIn</a></li>
-            <li><a target="_blank" href="https://www.instagram.com/wuda.io/">Instagram</a></li>
-          </ul>
-          <ul>
-            <li><a target="_blank" href="https://www.xing.com/profile/Daniel_Wurzer10">Xing</a></li>
-            <li><a target="_blank" href="https://www.youtube.com/user/56389578">YouTube</a></li>
-            <li><a target="_blank" href="https://twitter.com/wudablog">Twitter</a></li>
-          </ul>
+          <div class="row" style="gap: 0.5rem;">
+            <p><a target="_blank" href="https://play.google.com/store/apps/dev?id=5210774711432599412">Google Play</a></p>
+            <p><a target="_blank" href="https://github.com/wuda-software">GitHub</a></p>
+            <p><a target="_blank" href="https://www.linkedin.com/in/daniel-wurzer-84047517b/">LinkedIn</a></p>
+            <p><a target="_blank" href="https://www.youtube.com/user/56389578">YouTube</a></p>
+            <p><a target="_blank" href="https://www.instagram.com/wuda.io/">Instagram</a></p>
+            <p><a target="_blank" href="https://www.xing.com/profile/Daniel_Wurzer10">Xing</a></p>
+            <p><a target="_blank" href="https://x.com/wuda_io">X</a></p>
+          </div>
         </div>
       </div>
     </footer>
-    <script src="js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/js/materialize.min.js"></script>
     <script>M.AutoInit();</script>
+    <script src="/js/custom.js"></script>
   </body>
 </html>

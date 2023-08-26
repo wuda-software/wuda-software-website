@@ -7,48 +7,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Individuelle webbasierte Applikationen für eine schnellere und effizientere Abarbeitung Ihrer Geschäftsprozesse. Starten Sie jetzt ein Projekt mit uns!">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="img/WUDA-Apple-Touch-Icon.png">
+    <link rel="apple-touch-icon" href="/img/WUDA-Apple-Touch-Icon.png">
     <meta property="og:title" content="Innovative Software-Lösungen für mehr Freiheit | Wuda Software">
     <meta property="og:description" content="Individuelle webbasierte Applikationen für eine schnellere und effizientere Abarbeitung Ihrer Geschäftsprozesse. Starten Sie jetzt ein Projekt mit uns!">
     <meta property="og:type" content="Website">
     <meta property="og:site_name" content="Wuda Software">
-    <link rel="stylesheet" href="css/materialize.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper container"><a class="brand-logo left" href="."> <img src="img/wuda-logo.png"></a><a class="sidenav-trigger right" href="#" data-target="menu"><i class="material-icons">menu</i></a>
+    <div class="navbar-fixed" style="height:0;">
+      <nav style="box-shadow: none;">
+        <div class="nav-wrapper container"><a class="brand-logo left" href="/"> <img src="/img/wuda-logo.png"><span>Wuda Software</span></a><a class="sidenav-trigger right" href="#" data-target="menu"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
-            <li><a href=".">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/modules">Modules</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
       </nav>
     </div>
     <ul class="sidenav" id="menu">
-      <li><a href=".">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="/modules">Modules</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
-    <main>
-      <div class="hero">
-        <div class="container">
-          <h1>Organize your projects modular, stable and scalabe.</h1>
+    <div class="hero fullheight" id="why">
+      <div class="container row">
+        <div class="s12 m9">
+          <h1>Keeping the Overview and improve the connections to your business partners.</h1>
           <p>
             The Goal of Wuda Software is to build robust software applications in a wide range of business areas.
             Since many companies implement and practice similar processes, we have developed a system with modular components
             that allow seamlessly connecting to existing processes. Wuda Software digitizes your processes and increases
             the competitiveness of your company.
-          </p><a class="btn-large blue" href="projects.html">Check out Projects</a>
+          </p><a class="btn-large blue" href="#how">See how</a>
         </div>
       </div>
+    </div>
+    <div class="hero2 fullheight" id="how">
       <div class="container">
-        <h2>Why Wuda Software</h2>
+        <h2>We are developing a Platform which enables you to manage organizations and projects like a hero. Benefiting from a modular System, enables you to grow healtier and more sustainable while keeping flexibility.</h2>
         <p>
           The greatest possible freedom is one thing, a clear direction is another. Our values used to be freedom,
           but with infinite possibilities you only have chaos and no clear structure. Without structure, however,
@@ -62,16 +59,9 @@
           Our expertise is to digitally map steps and build software systems from them.
           We already have solutions for the most common problems in the form of software modules.
           We can then put together an individual solution for you from a variety of modules.
-          
-        </p>
-      </div>
-      <div class="container">
-        <div class="section"><a class="btn right blue" href="services.html">Check out Services</a></div>
-      </div>
-      <div class="container">
-        <div class="grid grid-benefits">
-          <div>
-            <h3>Your Benefits</h3>
+        </p><a class="btn-large blue" href="#what">Check out what we do</a>
+        <div class="row">
+          <div class="s6 m9">
             <ul>
               <li>Sophisticated data management</li>
               <li>High user-friendliness</li>
@@ -81,72 +71,114 @@
               <li>Competent consulting</li>
             </ul>
           </div>
-          <div><img src="img/undraw_real_time_analytics_re_yliv.svg"></div>
         </div>
       </div>
-    </main>
-    <div class="container card contact-form">
-      <div>
-        <h3>Send Request</h3>
-        <p>
-          If you have any concerns, inquiries or want to work with us, then drop us a request with some basic info via the form nearby.
-          We are looking forward hearing from you!
-        </p>
-        <p>
-          You can contact us via e-mail or telephone:<br>
-          E-Mail: info [at] wuda . io<br>
-          Tel.: +43 664 37 69 013
-        </p>
-      </div>
-      <form method="POST" action="./_request.php">
-        <div>
-          <label>Your Name</label>
-          <input class="browser-default" id="customer_name" type="text" name="request_sender_name" placeholder="Enter your first- and lastname">
-        </div>
-        <div>
-          <label>Your E-Mail</label>
-          <input class="browser-default" id="customer_email" type="email" name="request_sender_mail" placeholder="Enter your email address">
-        </div>
-        <div>
-          <label>Your Message</label>
-          <textarea id="message" name="request_message" placeholder="Enter your question, request or project description"></textarea>
-        </div>
-        <div class="right-align">
-          <button id="send-request">Send Request</button>
-        </div>
-      </form>
     </div>
-    <footer>
-      <div class="container footer-grid">
-        <div>
-          <h6>About</h6>
-          <p>Wuda Software plans and develops software projects and database applications for the digital future.</p>
+    <div class="fullheight black white-text" id="what">
+      <div class="container">
+        <h3>We create digital platforms, products or modules</h3>
+        <div class="row" style="gap:2rem;">
+          <div class="s12 m4">
+            <p>Platform (e.g. Physio System)</p>
+            <p>
+              This means we create multi-user systems for your community where users can register themselfs and order
+              stuff by themself. You have a set of modules which help you to fulfill the orders of your customers and suppliers.
+              The platform helps you to build a sustainable supply chain between your stakeholders.
+            </p>
+          </div>
+          <div class="s12 m4">
+            <p>Product (e.g. CarTrade)</p>
+            <p>
+              If you only need to use modules internally and have no need to create different organizations or manage
+              Roles and have multiple stakeholders involved in a product. If you decide to expand the product with more modules
+              this is also no problem. 
+            </p>
+          </div>
+          <div class="s12 m4">
+            <p>Module (Basic functions like create, read, update, delete)</p>
+            <p>
+              Modules are the building blocks of our systems. If you only need really basic features which only involves one
+              module, we can develop a single module, which you can then use as a plugin on your website.
+              
+            </p>
+          </div>
         </div>
-        <div>
-          <h6>Legal Information</h6>
-          <ul>
-            <li><a href="terms.html">Terms and conditions</a></li>
-            <li><a href="imprint.html">Imprint</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <div>
-          <h6>Stay in touch</h6>
-          <ul>
-            <li><a target="_blank" href="https://play.google.com/store/apps/dev?id=5210774711432599412">Google Play</a></li>
-            <li><a target="_blank" href="https://github.com/wuda-software">GitHub</a></li>
-            <li><a target="_blank" href="https://www.linkedin.com/in/daniel-wurzer-84047517b/">LinkedIn</a></li>
-            <li><a target="_blank" href="https://www.instagram.com/wuda.io/">Instagram</a></li>
-          </ul>
-          <ul>
-            <li><a target="_blank" href="https://www.xing.com/profile/Daniel_Wurzer10">Xing</a></li>
-            <li><a target="_blank" href="https://www.youtube.com/user/56389578">YouTube</a></li>
-            <li><a target="_blank" href="https://twitter.com/wudablog">Twitter</a></li>
-          </ul>
+        <h4>Latest Modules which we develop</h4>
+        <div class="row module-list" style="gap: 1rem; grid-auto-rows: 130px; padding: 1rem 0;" data-limit="4"></div>
+        <div class="row">
+          <div class="s6 m9"><a class="btn blue" href="#contact">Contact for offer</a><a class="btn-flat blue-text" href="modules">See all offers</a></div>
+          <div class="s6 m3"><img style="width:100%;" src="img/undraw_factory_dy-0-a.svg"></div>
         </div>
       </div>
-    </footer>
-    <script src="js/materialize.min.js"></script>
-    <script>M.AutoInit();</script>
+    </div>
+    <div class="fullheight" id="contact" style="background-color: #135;">
+      <div style="color:#ddd; background-color: #135;">
+        <div class="container" style="padding: 2rem 0;">
+          <div class="row">
+            <div class="s12 m5">
+              <h3 style="margin-top:0">Get in contact</h3>
+              <p>
+                If you have an idea, information or just want to talk to us,<br>
+                just drop us a message with some basic info via the form nearby.<br>
+                We will then respond as soon as possible.
+              </p><img src="/img/undraw_a_day_off_re_hedl.svg" style="width:50%">
+              <p>
+                If you dont like forms, you can also connect with us via<br>
+                <p><span style="display: inline-block; width: 100px;">E-Mail:</span> info [at] wuda . io</p>
+                <p><span style="display: inline-block; width: 100px;">Telephone:</span> +43 664 37 69 013</p>
+              </p>
+            </div>
+            <div class="s12 m7">
+              <form class="row" method="POST" action="./_request.php" style="gap:1rem;">
+                <div class="input-field s12">
+                  <input id="customer_name" type="text" style="color: white;" name="request_sender_name" placeholder="Enter your first- and lastname">
+                  <label>Your Name</label>
+                </div>
+                <div class="input-field s12">
+                  <input id="customer_email" type="email" style="color: white;" name="request_sender_mail" placeholder="Enter your email address">
+                  <label>Your E-Mail</label>
+                </div>
+                <div class="input-field s12">
+                  <textarea id="message" name="request_message" style="height:200px; color: white; outline:none; line-height: 1.2;" placeholder="Enter your question, request or project description"></textarea>
+                  <label>Your Message</label>
+                </div>
+                <div class="right-align">
+                  <button class="btn blue" id="send-request">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container row" style="gap: 1rem;">
+          <div class="s12 m4">
+            <h6>About</h6>
+            <p>Wuda Software plans and develops software projects and database applications for the digital future.</p>
+          </div>
+          <div class="s12 m3">
+            <h6>Legal Information</h6>
+            <div>
+              <p><a href="/terms">Terms and conditions<br></a><a href="/imprint">Imprint<br></a><a href="/privacy">Privacy Policy<br></a></p>
+            </div>
+          </div>
+          <div class="s12 m5">
+            <h6>Stay in touch</h6>
+            <div class="row" style="gap: 0.5rem;">
+              <p><a target="_blank" href="https://play.google.com/store/apps/dev?id=5210774711432599412">Google Play</a></p>
+              <p><a target="_blank" href="https://github.com/wuda-software">GitHub</a></p>
+              <p><a target="_blank" href="https://www.linkedin.com/in/daniel-wurzer-84047517b/">LinkedIn</a></p>
+              <p><a target="_blank" href="https://www.youtube.com/user/56389578">YouTube</a></p>
+              <p><a target="_blank" href="https://www.instagram.com/wuda.io/">Instagram</a></p>
+              <p><a target="_blank" href="https://www.xing.com/profile/Daniel_Wurzer10">Xing</a></p>
+              <p><a target="_blank" href="https://x.com/wuda_io">X</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/js/materialize.min.js"></script>
+      <script>M.AutoInit();</script>
+      <script src="/js/custom.js"></script>
+    </div>
   </body>
 </html>
