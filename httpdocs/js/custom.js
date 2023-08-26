@@ -8,15 +8,12 @@ fetch(
     if (targetEl.hasAttribute("data-limit"))
       dataLimit = parseInt(targetEl.getAttribute("data-limit"));
 
-    console.log(dataLimit);
     let appList = resp;
     if (dataLimit) appList = resp.slice(0, dataLimit);
 
-    console.log(appList);
-
     appList.map((app) => {
       const el = document.createElement("div");
-      el.classList.add("card", "s12", "m3");
+      el.classList.add("card", "s6", "m3");
       el.style.padding = "1rem";
       el.innerHTML = `
         <p style="font-weight: bold; margin:0;">${app.name}</p>

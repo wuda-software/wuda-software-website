@@ -63,7 +63,7 @@ nav .brand-logo > img {
 
 .hero2 {
   color: white;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.92)),
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.92)),
     url("../img/blockchain-7566579_1920.jpg") #333;
   background-size: cover;
   overflow: hidden;
@@ -72,7 +72,6 @@ nav .brand-logo > img {
   font-size: 2rem;
 }
 .preview {
-  padding: 0rem;
   perspective-origin: left center;
   perspective: 1500px;
   transform-style: preserve-3d;
@@ -80,7 +79,7 @@ nav .brand-logo > img {
 .preview img {
   transform: rotateY(-35deg) rotateX(15deg) scale(1);
   transition: all 0.5s;
-  width: 80%;
+  width: 75%;
 }
 
 .services {
