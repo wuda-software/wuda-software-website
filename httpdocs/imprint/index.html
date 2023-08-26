@@ -13,7 +13,7 @@
     <meta property="og:type" content="Website">
     <meta property="og:site_name" content="Wuda Software">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/css/materialize.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css"><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <div class="navbar-fixed" style="height:0;">
@@ -82,8 +82,12 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/js/materialize.min.js"></script>
-    <script>M.AutoInit();</script>
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/js/materialize.min.js"></script><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      M.AutoInit();
+      AOS.init();
+      
+    </script>
     <script src="/js/custom.js"></script>
   </body>
 </html>

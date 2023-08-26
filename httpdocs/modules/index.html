@@ -13,7 +13,7 @@
     <meta property="og:type" content="Website">
     <meta property="og:site_name" content="Wuda Software">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/css/materialize.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css"><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <div class="navbar-fixed" style="height:0;">
@@ -187,10 +187,10 @@
       <div class="container" style="padding: 2rem 0;">
         <div class="row">
           <div class="s12 m5">
-            <h3 style="margin-top:0">Get in contact</h3>
+            <h3 style="margin-top:0" data-aos="fade-up">Get in contact</h3>
             <p>
-              If you have an idea, information or just want to talk to us,<br>
-              just drop us a message with some basic info via the form nearby.<br>
+              If you have an idea, information or just want to talk to us,
+              just drop us a message with some basic info via the form nearby.
               We will then respond as soon as possible.
             </p><img src="/img/undraw_a_day_off_re_hedl.svg" style="width:50%">
             <p>
@@ -199,7 +199,8 @@
               <p><span style="display: inline-block; width: 100px;">Telephone:</span> +43 664 37 69 013</p>
             </p>
           </div>
-          <div class="s12 m7">
+          <div class="m1"></div>
+          <div class="s12 m6" style="margin-top:1rem">
             <form class="row" method="POST" action="/_request.php" style="gap:1rem;">
               <div class="input-field s12">
                 <input id="customer_name" type="text" style="color: white;" name="request_sender_name" placeholder="Enter your first- and lastname">
@@ -247,8 +248,12 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/js/materialize.min.js"></script>
-    <script>M.AutoInit();</script>
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.2-alpha/dist/js/materialize.min.js"></script><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      M.AutoInit();
+      AOS.init();
+      
+    </script>
     <script src="/js/custom.js"></script>
   </body>
 </html>

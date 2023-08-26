@@ -2,17 +2,18 @@ div(style="color:#ddd; background-color: #135;")
   div.container(style="padding: 2rem 0;")
     div.row
       div.s12.m5
-        h3(style="margin-top:0") Get in contact
+        h3(style="margin-top:0" data-aos="fade-up") Get in contact
         p.
-          If you have an idea, information or just want to talk to us,<br>
-          just drop us a message with some basic info via the form nearby.<br>
+          If you have an idea, information or just want to talk to us,
+          just drop us a message with some basic info via the form nearby.
           We will then respond as soon as possible.
         img(src="/img/undraw_a_day_off_re_hedl.svg" style="width:50%")
         p.
           If you dont like forms, you can also connect with us via<br>
           <p><span style="display: inline-block; width: 100px;">E-Mail:</span> info [at] wuda . io</p>
           <p><span style="display: inline-block; width: 100px;">Telephone:</span> +43 664 37 69 013</p>
-      div.s12.m7
+      div.m1
+      div.s12.m6(style="margin-top:1rem")
         form.row(method='POST', action='/_request.php' style="gap:1rem;")
           div.input-field.s12
             input#customer_name(type='text' style="color: white;" name='request_sender_name' placeholder='Enter your first- and lastname')
