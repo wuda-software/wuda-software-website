@@ -72,7 +72,7 @@ nav .brand-logo > img {
   font-size: 2rem;
 }
 .preview {
-  padding: 3rem;
+  padding: 0rem;
   perspective-origin: left center;
   perspective: 1500px;
   transform-style: preserve-3d;
