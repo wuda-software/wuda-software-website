@@ -69,19 +69,18 @@ nav .brand-logo > img {
   overflow: hidden;
 }
 .hero2 h2 {
-  z-index: 100;
-  position: relative;
-  font-size: 2.25rem;
+  font-size: 2rem;
 }
 .preview {
-  z-index: 1;
+  padding: 3rem;
   perspective-origin: left center;
   perspective: 1500px;
   transform-style: preserve-3d;
 }
 .preview img {
-  transform: rotateY(-35deg) rotateX(15deg) scale(1) translateY(3rem);
+  transform: rotateY(-35deg) rotateX(15deg) scale(1);
   transition: all 0.5s;
+  width: 80%;
 }
 
 .services {
@@ -131,5 +130,8 @@ footer {
   }
   .container {
     width: 90%;
+  }
+  .preview img {
+    width: 100%;
   }
 }
