@@ -80,7 +80,7 @@ nav .brand-logo > img {
   transform-style: preserve-3d;
 }
 .preview img {
-  transform: rotateY(-35deg) rotateX(15deg) scale(1.25) translateY(6rem);
+  transform: rotateY(-35deg) rotateX(15deg) scale(1) translateY(3rem);
   transition: all 0.5s;
 }
 
