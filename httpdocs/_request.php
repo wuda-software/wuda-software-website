@@ -48,13 +48,9 @@
 	file_put_contents($LOG_FILENAME, $content);
 
 	// Format Message
-  $fmtMessage = "
-    $now / $ip<br>
-    $senderName / $senderMail<br>
-    <strong>Message:</strong><br>
-    $message
-  ";
-  // echo $fmtMessage;
+  $fmtMessage = "$now / $ip / $senderName / $senderMail\n
+===
+$message";
 
   $resp = mail("info@wuda.io", "New Message via wuda.io", $fmtMessage);
   if ($resp)
