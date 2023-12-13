@@ -7,9 +7,9 @@
 
 	// Check inputs
 	$error = "";
-	if (is_null($senderName) || strlen(trim($senderName)) === 0) $error += "Sender Name not set or empty!\n";
-	if (is_null($senderMail) || strlen(trim($senderMail)) === 0) $error += "Sender Mail not set or empty!\n";
-	if (is_null($message) || strlen(trim($message)) === 0) $error += "Message not set or empty!\n";
+	if (is_null($senderName) || strlen(trim($senderName)) === 0) $error .= "Sender Name not set or empty!\n";
+	if (is_null($senderMail) || strlen(trim($senderMail)) === 0) $error .= "Sender Mail not set or empty!\n";
+	if (is_null($message) || strlen(trim($message)) === 0) $error .= "Message not set or empty!\n";
 	if (strlen($error) > 0) {
 		die($error);
 	}
