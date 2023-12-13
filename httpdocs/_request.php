@@ -25,7 +25,7 @@
 	$lines = explode("\n", $content);
 	
 	// filter outdated
-	$newLines = array_filter($lines, function($line) {
+	$newLines = array_filter($lines, function($line) use ($THROTTLE_SEC) {
 		$parts = explode("|", $line);
 		$time = (int)$parts[0];
 		$since = time() - $time;
