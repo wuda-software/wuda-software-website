@@ -1,5 +1,4 @@
 <?php
-  $now = date("Y-m-d H:i:s");
   $ip = $_SERVER['REMOTE_ADDR'];
   $senderName = isset($_POST["request_sender_name"]) ? $_POST["request_sender_name"] : null;
   $senderMail = isset($_POST["request_sender_mail"]) ? $_POST["request_sender_mail"] : null;
@@ -18,6 +17,8 @@
 	// Config
 	$LOG_FILENAME = "log.txt";
 	$THROTTLE_SEC = 60;
+	$RECIPIENT_MAIL = "info@wuda.io";
+	$MESSAGE_SUBJECT = "Message via wuda.io";
 	
 	// Create Temp file which stores the IP and Timestamp	
 	$content = file_get_contents($LOG_FILENAME);
@@ -47,12 +48,19 @@
 	$content = implode("\n", $newLines);
 	file_put_contents($LOG_FILENAME, $content);
 
-	// Format Message
-  $fmtMessage = "$now / $ip / $senderName / $senderMail\n
-===
-$message";
+	// ================> Send Mail
+	
+	$senderMail = strip_tags($senderMail);
+	$senderName = strip_tags($senderName);
+		
+	$header  = "MIME-Version: 1.0\r\n";
+	$header .= "Content-type: text/html; charset=utf-8\r\n";
+	$header .= "From: wudadmin@wuda.io\r\n";
+	$header .= "Reply-To: $senderName<$senderMail>\r\n";
+	$header .= "X-Mailer: PHP ". phpversion();
 
-  $resp = mail("info@wuda.io", "New Message via wuda.io", $fmtMessage);
+  $resp = mail($RECIPIENT_MAIL, $MESSAGE_SUBJECT, $message, $header);
+  
   if ($resp)
     echo "✔ Your Request was sent!";
   else
