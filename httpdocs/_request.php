@@ -56,8 +56,8 @@
 		
 	$header  = "MIME-Version: 1.0\r\n";
 	$header .= "Content-type: text/html; charset=utf-8\r\n";
-	$header .= "From: wudadmin@wuda.io\r\n";
-	$header .= "Reply-To: $senderName<$senderMail>\r\n";
+	$header .= "From: $senderName<$senderMail>\r\n";
+//	$header .= "Reply-To: $senderName<$senderMail>\r\n";
 	$header .= "X-Mailer: PHP ". phpversion();
 
   $resp = mail($RECIPIENT_MAIL, $MESSAGE_SUBJECT, $message, $header);
