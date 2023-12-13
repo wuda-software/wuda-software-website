@@ -6,9 +6,13 @@
   $message = isset($_POST["request_message"]) ? $_POST["request_message"] : null;
 
 	// Check inputs
-	if (is_null($senderName) || strlen(trim($senderName)) === 0) die("Sender Name not set or empty!");
-	if (is_null($senderMail) || strlen(trim($senderMail)) === 0) die("Sender Mail not set or empty!");
-	if (is_null($message) || strlen(trim($message)) === 0) die("Message not set or empty!");
+	$error = "";
+	if (is_null($senderName) || strlen(trim($senderName)) === 0) $error += "Sender Name not set or empty!\n";
+	if (is_null($senderMail) || strlen(trim($senderMail)) === 0) $error += "Sender Mail not set or empty!\n";
+	if (is_null($message) || strlen(trim($message)) === 0) $error += "Message not set or empty!\n";
+	if (strlen($error) > 0) {
+		die($error);
+	}
 
 	// TODO: Create Temp file which stores the IP and Timestamp
 	$logLine = $now . "|" . $ip;
