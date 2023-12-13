@@ -19,6 +19,7 @@
 	$THROTTLE_SEC = 60;
 	$RECIPIENT_MAIL = "info@wuda.io";
 	$MESSAGE_SUBJECT = "Message via wuda.io";
+	$SYSTEM_MAIL = "wudadmin@wuda.io";
 	
 	// Create Temp file which stores the IP and Timestamp	
 	$content = file_get_contents($LOG_FILENAME);
@@ -56,8 +57,8 @@
 		
 	$header  = "MIME-Version: 1.0\r\n";
 	$header .= "Content-type: text/html; charset=utf-8\r\n";
-	$header .= "From: $senderName<$senderMail>\r\n";
-//	$header .= "Reply-To: $senderName<$senderMail>\r\n";
+	$header .= "From: $senderName<$SYSTEM_MAIL>\r\n";
+	$header .= "Reply-To: $senderName<$senderMail>\r\n";
 	$header .= "X-Mailer: PHP ". phpversion();
 
   $resp = mail($RECIPIENT_MAIL, $MESSAGE_SUBJECT, $message, $header);
