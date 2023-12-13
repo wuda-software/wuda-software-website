@@ -52,6 +52,7 @@
 	
 	$senderMail = strip_tags($senderMail);
 	$senderName = strip_tags($senderName);
+	$message = nl2br($message);
 		
 	$header  = "MIME-Version: 1.0\r\n";
 	$header .= "Content-type: text/html; charset=utf-8\r\n";
