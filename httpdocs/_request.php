@@ -6,12 +6,12 @@
   $message = isset($_POST["request_message"]) ? $_POST["request_message"] : null;
 
 	// Check inputs
-	$error = "";
-	if (is_null($senderName) || strlen(trim($senderName)) === 0) $error .= "Sender Name not set or empty!\n";
-	if (is_null($senderMail) || strlen(trim($senderMail)) === 0) $error .= "Sender Mail not set or empty!\n";
-	if (is_null($message) || strlen(trim($message)) === 0) $error .= "Message not set or empty!\n";
-	if (strlen($error) > 0) {
-		die($error);
+	$error = [];
+	if (is_null($senderName) || strlen(trim($senderName)) === 0) array_push($error, "Sender Name not set or empty!");
+	if (is_null($senderMail) || strlen(trim($senderMail)) === 0) array_push($error, "Sender Mail not set or empty!");
+	if (is_null($message) || strlen(trim($message)) === 0) array_push($error, "Message not set or empty!");
+	if (count($error) > 0) {
+		die(join("<br>", $error));
 	}
 
 	// TODO: Create Temp file which stores the IP and Timestamp
