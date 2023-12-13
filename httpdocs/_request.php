@@ -23,11 +23,19 @@
 	// filter outdated
 	$newLines = array_filter($lines, function($line) {
 		$parts = explode("|", $line);
-		$time = (int)$parts[0];
-		$ip = $parts[1];
+		$time = (int)$parts[0];		
 		$since = time() - $time;
 		return $since < 60; // outdated
 	});
+	
+	// check if ip exists
+	foreach ($newLienes as $line) {
+		$parts = explode("|", $line);
+		$_ip = $parts[1];
+		if ($ip === $_ip) {
+			die("You already sent a request. Please wait some seconds to send another one!");
+		}
+	}
 	
 	// Add new
 	$logLine = time() . "|" . $ip . "\n";
