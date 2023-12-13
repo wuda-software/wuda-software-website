@@ -12,20 +12,24 @@
 	if (is_null($message) || strlen(trim($message)) === 0) array_push($error, "Message not set or empty!");
 	if (count($error) > 0) {
 		echo join("<br>", $error);
-		//exit();
+		exit();
 	}
 
-	// TODO: Create Temp file which stores the IP and Timestamp
-	$content = file_get_contents("log.txt");
+	// Config
+	$LOG_FILENAME = "log.txt";
+	$THROTTLE_SEC = 60;
+	
+	// Create Temp file which stores the IP and Timestamp	
+	$content = file_get_contents($LOG_FILENAME);
 	// Check if i am already in file
 	$lines = explode("\n", $content);
 	
 	// filter outdated
 	$newLines = array_filter($lines, function($line) {
 		$parts = explode("|", $line);
-		$time = (int)$parts[0];		
+		$time = (int)$parts[0];
 		$since = time() - $time;
-		return $since < 60; // outdated
+		return $since < $THROTTLE_SEC; // outdated
 	});
 	
 	// check if ip exists
@@ -41,11 +45,9 @@
 	$logLine = time() . "|" . $ip . "\n";
 	array_push($newLines, $logLine);
 	$content = implode("\n", $newLines);
-	file_put_contents("log.txt", $content);
+	file_put_contents($LOG_FILENAME, $content);
 
-	echo "===> OK";
-	exit();
-
+	// Format Message
   $fmtMessage = "
     $now / $ip<br>
     $senderName / $senderMail<br>
@@ -54,8 +56,8 @@
   ";
   // echo $fmtMessage;
 
-  $resp = mail("info@wuda.io", "New Request (wuda.io)", $fmtMessage);
+  $resp = mail("info@wuda.io", "New Message via wuda.io", $fmtMessage);
   if ($resp)
     echo "✔ Your Request was sent!";
   else
-    echo "❌ Error while sending Request! Please send via mail.";
+    echo "❌ Error while sending Request! Please send your request via mail.";
