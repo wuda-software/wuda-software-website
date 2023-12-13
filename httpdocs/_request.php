@@ -29,20 +29,21 @@
 	});
 	
 	// check if ip exists
-	foreach ($newLienes as $line) {
+	foreach ($newLines as $line) {
 		$parts = explode("|", $line);
 		$_ip = $parts[1];
 		if ($ip === $_ip) {
-			die("You already sent a request. Please wait some seconds to send another one!");
+			die("FAILED: You already sent a request. Please wait some seconds to send another one!");
 		}
 	}
 	
-	// Add new
+	// Add new Line
 	$logLine = time() . "|" . $ip . "\n";
-	$content .= $logLine;
-	file_put_contents("log.txt", $logLine);
+	array_push($newLines, $logLine);
+	$content = implode("\n", $newLines);
+	file_put_contents("log.txt", $content);
 
-	echo "LEL";
+	echo "===> OK";
 	exit();
 
   $fmtMessage = "
