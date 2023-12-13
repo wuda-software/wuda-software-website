@@ -11,11 +11,27 @@
 	if (is_null($senderMail) || strlen(trim($senderMail)) === 0) array_push($error, "Sender Mail not set or empty!");
 	if (is_null($message) || strlen(trim($message)) === 0) array_push($error, "Message not set or empty!");
 	if (count($error) > 0) {
-		die(join("<br>", $error));
+		echo join("<br>", $error);
+		//exit();
 	}
 
 	// TODO: Create Temp file which stores the IP and Timestamp
-	$logLine = $now . "|" . $ip;
+	$content = file_get_contents("log.txt");
+	// Check if i am already in file
+	$lines = explode("\n", $content);
+	
+	// filter outdated
+	$newLines = array_filter($lines, function($line) {
+		$parts = explode("|", $line);
+		$time = (int)$parts[0];
+		$ip = $parts[1];
+		$since = time() - $time;
+		return $since < 60; // outdated
+	});
+	
+	// Add new
+	$logLine = time() . "|" . $ip . "\n";
+	$content .= $logLine;
 	file_put_contents("log.txt", $logLine);
 
 	echo "LEL";
