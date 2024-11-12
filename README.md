@@ -1,6 +1,9 @@
 # Getting started
+
 1. run `npm install`
 2. run `npm run dev`
 
 ## TODO
-- Make a workflow for building on Github
+
+- [ ] Host Website on GitHub
+- [ ] Use handlebars.js instead of PUG and Grunt
