@@ -1,4 +1,4 @@
-const urlModules = "https://raw.githubusercontent.com/wuda-software/module-list/main/apps.json";
+const urlModules = "https://adm-op.com/apps.json";
 
 fetch(urlModules)
   .then((resp) => resp.json())
