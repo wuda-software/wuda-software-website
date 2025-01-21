@@ -28,7 +28,6 @@ setInterval(() => {
   const els = document.querySelectorAll(".cube div span");
   if (els.length === 0) return;
   const randIndex = Math.ceil(Math.random() * els.length);
-  console.log(randIndex);
   els[randIndex].classList.add("active");
   setTimeout(() => {
     els[randIndex].classList.remove("active");
