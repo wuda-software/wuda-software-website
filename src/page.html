@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="{{description}}" />
+    <link rel="shortcut icon" href="{{context}}/favicon.ico" />
+    <link rel="apple-touch-icon" href="{{context}}/img/WUDA-Apple-Touch-Icon.png" />
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{description}}" />
+    <meta property="og:type" content="Website" />
+    <meta property="og:site_name" content="{{title}}" />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@latest/dist/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="{{context}}/css/styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    {{> navigation}}
+    <main style="padding-top: 64px">{{{content}}}</main>
+    {{> footer}}
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@latest/dist/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      M.AutoInit();
+      AOS.init();
+    </script>
+    <script src="{{context}}/js/custom.js"></script>
+  </body>
+</html>

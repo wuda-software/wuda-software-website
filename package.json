@@ -19,5 +19,12 @@
   "description": "",
   "dependencies": {
     "handlebars": "^4.7.8"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 120
   }
 }
