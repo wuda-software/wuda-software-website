@@ -39,7 +39,7 @@ Promise.all([
   const template = Handlebars.compile(page.toString());
 
   // Data
-  const context = 'http://127.0.0.1:8080/dest';
+  const context = 'https://wuda.io'; //'http://127.0.0.1:8080/dest';
   const websites = [
     {
       context,
