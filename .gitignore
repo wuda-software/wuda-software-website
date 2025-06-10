@@ -1,2 +1,19 @@
+# OS or Editor folders
+._*
+.cache
+.DS_Store
+.idea
+.vs
+.vscode
+.project
+.projectile
+.settings
+.tmproj
+*.esproj
+*.sublime-project
+*.sublime-workspace
+nbproject
+Thumbs.db
+
 node_modules
 node_modules/**/*
